@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'story.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -48,19 +49,22 @@ class _StartPageState extends State<StartPage> {
         child: Column(
           children: [
             SafeArea(child: Text('Destiny',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.white),)),
-            const Expanded(
+             Expanded(
                 flex: 5,
                 child: Center(
-                  child: Text('vublgKRGBRIHNkg WRKHNRLGB',style: TextStyle(color: Colors.white,fontSize: 20),),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(Story().getq(),style: TextStyle(color: Colors.white,fontSize: 20,),textAlign: TextAlign.center,),
+                  ),
                 ),
             ),
             Expanded(
                 flex: 1,
                 child: TextButton(
-                  child: const Card(
+                  child: Card(
                     color: Colors.green,
                     child: ListTile(
-                      title: Center(child: Text('nnlnrlnglrnlvnernrrnn/vwvn',style: TextStyle(fontWeight: FontWeight.bold),)),
+                      title: Center(child: Text(Story().getop1(),style: TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,)),
                       textColor: Colors.white,
                     ),
                   ),
@@ -70,10 +74,10 @@ class _StartPageState extends State<StartPage> {
             Expanded(
               flex: 1,
               child: TextButton(
-                child: const Card(
+                child: Card(
                   color: Colors.green,
                   child: ListTile(
-                    title: Center(child: Text('nnlnrlnglrnlvnernrrnn/vwvn',style: TextStyle(fontWeight: FontWeight.bold))),
+                    title: Center(child: Text(Story().getop2(),style: TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,)),
                     textColor: Colors.white,
                   ),
                 ),
