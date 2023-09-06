@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'story.dart';
-
+int mode=0;
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
@@ -48,13 +48,13 @@ class _StartPageState extends State<StartPage> {
         ),
         child: Column(
           children: [
-            SafeArea(child: Text('Destiny',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.white),)),
+            const SafeArea(child: Text('Destiny',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.white),)),
              Expanded(
                 flex: 5,
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(Story().getq(),style: TextStyle(color: Colors.white,fontSize: 20,),textAlign: TextAlign.center,),
+                    padding:const EdgeInsets.all(8.0),
+                    child: Text(Story().getq(),style: const TextStyle(color: Colors.white,fontSize: 20,),textAlign: TextAlign.center,),
                   ),
                 ),
             ),
@@ -64,11 +64,17 @@ class _StartPageState extends State<StartPage> {
                   child: Card(
                     color: Colors.green,
                     child: ListTile(
-                      title: Center(child: Text(Story().getop1(),style: TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,)),
+                      title: Center(child: Text(Story().getop1(),style: const TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,)),
                       textColor: Colors.white,
                     ),
                   ),
-                  onPressed: (){},
+                  onPressed: (){
+                    Story().addNew1();
+                    Story().update();
+                    setState(() {
+
+                    });
+                  },
                 ),
             ),
             Expanded(
@@ -77,11 +83,17 @@ class _StartPageState extends State<StartPage> {
                 child: Card(
                   color: Colors.green,
                   child: ListTile(
-                    title: Center(child: Text(Story().getop2(),style: TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,)),
+                    title: Center(child: Text(Story().getop2(),style: const TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,)),
                     textColor: Colors.white,
                   ),
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  Story().addNew2();
+                  Story().update();
+                  setState(() {
+
+                  });
+                },
               ),
             ),
           ],
