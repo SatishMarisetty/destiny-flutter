@@ -7,11 +7,15 @@ class Story{
   ];
   
   static List<StoryBrain> _op1 = [
-    StoryBrain("He eaten it and shared some of it with rajamouli. Rajamouli is Prabhas's bestie. It came to the King's knowledge and decided to make them a couple. Will you suggest the same to him?", "Yes it will safe to King also because he wont see King's ass again and better kick them out of AP.", "I think Sriram is perfect match to prabhas because Sriram had love on prabhas as much as Prabhas had on King"),
+    StoryBrain("He eaten it and shared some of it with rajamouli. Rajamouli is Prabhas's bestie. It came to the King's knowledge and decided to make them a couple. Will you suggest the same to him?", "Yes it will be safe to King also because he wont see King's ass again and better kick them out of AP", "I think Sriram is perfect match to prabhas because Sriram had love on prabhas as much as Prabhas had on King"),
+    StoryBrain("After married Rajamouli, Prabhas had tough time because they are not loving each other. After a while Prabhas saw Sriram in underwear and fell in love with him. Sriram also had interest in prabhas. Since then Rajamouli, Prabhas and Sriram were Living and fucking together", "Restart", ""),
+    StoryBrain("After their marriage they adopted Jagan (becuz Gays cant produce one) who is also a gay and been living very great", "Restart", ""),
   ];
   
   static List<StoryBrain> _op2 = [
     StoryBrain("While he is begging he met Sriram who loving him and Prabhas saw his love on King on Sriram's. Help that gay by suggesting him what to do.", "Yeah it is better to marry sriram and flee from AP to escape from King", "Keep sriram as bitch and obey king's order to be begger"),
+    StoryBrain("After their marriage they adopted Jagan (becuz Gays cant produce one) who is also a gay and been living very great", "Restart", ""),
+    StoryBrain("Sriram being good bitch but after a while Rajamouli felt possessive and had a fight with Sriram. Finally, all of them decided to live together.", "Restart", ""),
   ];
   String getq()
   {
@@ -37,7 +41,7 @@ class Story{
   }
   void update()
   {
-    if (_op1.length!=0)
+    if (_op1.length>0)
     {
       _op1.removeAt(0);
       _op2.removeAt(0);
@@ -50,14 +54,16 @@ class Story{
         ];
 
         _op1 = [
-          StoryBrain("He eaten it and shared some of it with rajamouli. Rajamouli is Prabhas's bestie. It came to the King's knowledge and decided to make them a couple. Will you suggest the same to him?", "Yes it will safe to King also because he wont see King's ass again and better kick them out of AP.", "I think Sriram is perfect match to prabhas because Sriram had love on prabhas as much as Prabhas had on King"),
+          StoryBrain("He eaten it and shared some of it with rajamouli. Rajamouli is Prabhas's bestie. It came to the King's knowledge and decided to make them a couple. Will you suggest the same to him?", "Yes it will be safe to King also because he wont see King's ass again and better kick them out of AP", "I think Sriram is perfect match to prabhas because Sriram had love on prabhas as much as Prabhas had on King"),
+          StoryBrain("After married Rajamouli, Prabhas had tough time because they are not loving each other. After a while Prabhas saw Sriram in underwear and fell in love with him. Sriram also had interest in prabhas. Since then Rajamouli, Prabhas and Sriram were Living and fucking together", "Restart", ""),
+          StoryBrain("After their marriage they adopted Jagan (becuz Gays cant produce one) who is also a gay and been living very great", "Restart", ""),
         ];
 
         _op2 = [
           StoryBrain("While he is begging he met Sriram who loving him and Prabhas saw his love on King on Sriram's. Help that gay by suggesting him what to do.", "Yeah it is better to marry sriram and flee from AP to escape from King", "Keep sriram as bitch and obey king's order to be begger"),
+          StoryBrain("After their marriage they adopted Jagan (becuz Gays cant produce one) who is also a gay and been living very great", "Restart", ""),
+          StoryBrain("Sriram being good bitch but after a while Rajamouli felt possessive and had a fight with Sriram. Finally, all of them decided to live together.", "Restart", ""),
         ];
-        StartPage();
       }
-
   }
 }

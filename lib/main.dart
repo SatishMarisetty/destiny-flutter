@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'story.dart';
-int mode=0;
+bool mode=true;
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
@@ -47,7 +47,7 @@ class _StartPageState extends State<StartPage> {
               fit: BoxFit.cover),
         ),
         child: Column(
-          children: [
+          children: <Widget>[
             const SafeArea(child: Text('Destiny',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.white),)),
              Expanded(
                 flex: 5,
@@ -77,25 +77,30 @@ class _StartPageState extends State<StartPage> {
                   },
                 ),
             ),
-            Expanded(
-              flex: 1,
-              child: TextButton(
-                child: Card(
-                  color: Colors.green,
-                  child: ListTile(
-                    title: Center(child: Text(Story().getop2(),style: const TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,)),
-                    textColor: Colors.white,
-                  ),
-                ),
-                onPressed: (){
-                  Story().addNew2();
-                  Story().update();
-                  setState(() {
-
-                  });
-                },
-              ),
+      if (mode)...{
+      Expanded(
+        flex: 1,
+        child: TextButton(
+          child: Card(
+            color: Colors.green,
+            child: ListTile(
+              title: Center(child: Text(Story().getop2(),
+                style: const TextStyle(fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,)),
+              textColor: Colors.white,
             ),
+          ),
+          onPressed: () {
+            Story().addNew2();
+            Story().update();
+            setState(() {
+
+            });
+          },
+        ),
+      )
+    }
+
           ],
         ),
       ),
