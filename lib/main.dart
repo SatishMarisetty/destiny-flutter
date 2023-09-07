@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'story.dart';
-bool mode=true;
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
@@ -11,6 +10,7 @@ void main() {
   );
   runApp(const Destiny());
 }
+
 
 class Destiny extends StatefulWidget {
   const Destiny({super.key});
@@ -77,7 +77,7 @@ class _StartPageState extends State<StartPage> {
                   },
                 ),
             ),
-      if (mode)...{
+      if (Story().check())...{
       Expanded(
         flex: 1,
         child: TextButton(
