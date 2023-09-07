@@ -42,6 +42,7 @@ class Story{
   }
   void addNew2()
   {
+
     _qs.add(_op2[0]);
     _i++;
   }
